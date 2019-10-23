@@ -1,0 +1,21 @@
+version: "3"
+
+networks:
+  default:
+    external:
+      name: couch
+
+services:
+  couchbase-go-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: couchbase-go-api
+    environment:
+      - COUCHBASE_HOST=db
+      - TENANT_ID=1111
+      - BUCKET_NAME_PENDING=pending_connections
+      - BUCKET_NAME_CONNECTIONS=staging_connections
+      - BUCKET_NAME_DEFAULT=staging
+    ports:
+      - "9001:9001"

@@ -1,0 +1,42 @@
+{
+    "type": "record",
+    "name": "FunctionMsg",
+    "namespace": "io.confluent.ksql.avro_schemas",
+    "fields": [
+        {
+            "name": "slot",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "index",
+            "type": "int",
+            "default": 0
+        },
+        {
+            "name": "firmware",
+            "type": "int",
+            "default": 32
+        },
+        {
+            "name": "param1",
+            "type": "bytes",
+            "default": ""
+        },
+        {
+            "name": "param2",
+            "type": "bytes",
+            "default": ""
+        },
+        {
+            "name": "param3",
+            "type": "bytes",
+            "default": ""
+        },
+        {
+            "name": "param4",
+            "type": "bytes",
+            "default": ""
+        }
+    ]
+}
