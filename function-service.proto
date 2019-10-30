@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+package ppfunction;
+
+message CallDeviceFunctionRequest {
+    string deviceEUI = 1;
+    string functionName = 2;
+    string param1 = 3;
+    string param2 = 4;
+    string param3 = 5;
+    string param4 = 6;
+}
+
+message GetDeviceFunctionsRequest {
+    string identifier = 1;
+}
+
+message DeviceFunctions {
+    repeated DeviceFunction functions = 1;
+}
+
+message DeviceFunction {
+    string functionName = 1;
+    int32 index = 2;
+    string param1type = 3;
+    string param2type = 4;
+    string param3type = 5;
+    string param4type = 6;
+}
+
+message Response {
+    string reply = 1;
+}
+
+service DeviceFunctionService {
+    rpc CallDeviceFunction (CallDeviceFunctionRequest) returns (Response) {}
+
+    rpc GetDeviceFunctions (GetDeviceFunctionsRequest) returns (DeviceFunctions) {}
+}
