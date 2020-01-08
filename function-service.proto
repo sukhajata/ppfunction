@@ -26,6 +26,11 @@ message DeviceFunction {
     string param2type = 4;
     string param3type = 5;
     string param4type = 6;
+    string description = 7;
+    string param1description = 8;
+    string param2description = 9;
+    string param3description = 10;
+    string param4description = 11;
 }
 
 message Response {

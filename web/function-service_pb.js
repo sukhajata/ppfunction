@@ -729,7 +729,12 @@ proto.ppfunction.DeviceFunction.toObject = function(includeInstance, msg) {
     param1type: jspb.Message.getFieldWithDefault(msg, 3, ""),
     param2type: jspb.Message.getFieldWithDefault(msg, 4, ""),
     param3type: jspb.Message.getFieldWithDefault(msg, 5, ""),
-    param4type: jspb.Message.getFieldWithDefault(msg, 6, "")
+    param4type: jspb.Message.getFieldWithDefault(msg, 6, ""),
+    description: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    param1description: jspb.Message.getFieldWithDefault(msg, 8, ""),
+    param2description: jspb.Message.getFieldWithDefault(msg, 9, ""),
+    param3description: jspb.Message.getFieldWithDefault(msg, 10, ""),
+    param4description: jspb.Message.getFieldWithDefault(msg, 11, "")
   };
 
   if (includeInstance) {
@@ -789,6 +794,26 @@ proto.ppfunction.DeviceFunction.deserializeBinaryFromReader = function(msg, read
     case 6:
       var value = /** @type {string} */ (reader.readString());
       msg.setParam4type(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setDescription(value);
+      break;
+    case 8:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setParam1description(value);
+      break;
+    case 9:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setParam2description(value);
+      break;
+    case 10:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setParam3description(value);
+      break;
+    case 11:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setParam4description(value);
       break;
     default:
       reader.skipField();
@@ -858,6 +883,41 @@ proto.ppfunction.DeviceFunction.serializeBinaryToWriter = function(message, writ
   if (f.length > 0) {
     writer.writeString(
       6,
+      f
+    );
+  }
+  f = message.getDescription();
+  if (f.length > 0) {
+    writer.writeString(
+      7,
+      f
+    );
+  }
+  f = message.getParam1description();
+  if (f.length > 0) {
+    writer.writeString(
+      8,
+      f
+    );
+  }
+  f = message.getParam2description();
+  if (f.length > 0) {
+    writer.writeString(
+      9,
+      f
+    );
+  }
+  f = message.getParam3description();
+  if (f.length > 0) {
+    writer.writeString(
+      10,
+      f
+    );
+  }
+  f = message.getParam4description();
+  if (f.length > 0) {
+    writer.writeString(
+      11,
       f
     );
   }
@@ -969,6 +1029,96 @@ proto.ppfunction.DeviceFunction.prototype.getParam4type = function() {
  */
 proto.ppfunction.DeviceFunction.prototype.setParam4type = function(value) {
   return jspb.Message.setProto3StringField(this, 6, value);
+};
+
+
+/**
+ * optional string description = 7;
+ * @return {string}
+ */
+proto.ppfunction.DeviceFunction.prototype.getDescription = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ppfunction.DeviceFunction} returns this
+ */
+proto.ppfunction.DeviceFunction.prototype.setDescription = function(value) {
+  return jspb.Message.setProto3StringField(this, 7, value);
+};
+
+
+/**
+ * optional string param1description = 8;
+ * @return {string}
+ */
+proto.ppfunction.DeviceFunction.prototype.getParam1description = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ppfunction.DeviceFunction} returns this
+ */
+proto.ppfunction.DeviceFunction.prototype.setParam1description = function(value) {
+  return jspb.Message.setProto3StringField(this, 8, value);
+};
+
+
+/**
+ * optional string param2description = 9;
+ * @return {string}
+ */
+proto.ppfunction.DeviceFunction.prototype.getParam2description = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ppfunction.DeviceFunction} returns this
+ */
+proto.ppfunction.DeviceFunction.prototype.setParam2description = function(value) {
+  return jspb.Message.setProto3StringField(this, 9, value);
+};
+
+
+/**
+ * optional string param3description = 10;
+ * @return {string}
+ */
+proto.ppfunction.DeviceFunction.prototype.getParam3description = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ppfunction.DeviceFunction} returns this
+ */
+proto.ppfunction.DeviceFunction.prototype.setParam3description = function(value) {
+  return jspb.Message.setProto3StringField(this, 10, value);
+};
+
+
+/**
+ * optional string param4description = 11;
+ * @return {string}
+ */
+proto.ppfunction.DeviceFunction.prototype.getParam4description = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ppfunction.DeviceFunction} returns this
+ */
+proto.ppfunction.DeviceFunction.prototype.setParam4description = function(value) {
+  return jspb.Message.setProto3StringField(this, 11, value);
 };
 
 
